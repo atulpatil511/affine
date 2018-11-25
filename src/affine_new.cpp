@@ -36,7 +36,7 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #include <iostream>
 #include <CL/cl.h>
 #include <vector>
-#include "/home/atul/Desktop/SDAccel_examples/libs/bitmap/bitmap.h"
+#include "/home/atul1/Desktop/SDAccel_examples/libs/bitmap/bitmap.h"
 #include "sys/time.h"
 //#include "/home/atul/Desktop/SDAccel_examples/libs/xcl2/xcl2.hpp"
 
@@ -71,9 +71,9 @@ int main(int argc, char** argv)
 	unsigned short *input_image;
 	unsigned short *output_image;
 	//std::vector<unsigned short,aligned_allocator<unsigned short>> input_image(Y_SIZE*X_SIZE);
-	input_image=(unsigned short *)calloc(262144,sizeof(unsigned short));
+	input_image=(unsigned short *)malloc(262144*sizeof(unsigned short));
 	cl_int err;
-	output_image=(unsigned short *)calloc(262144,sizeof(unsigned short));
+	output_image=(unsigned short *)malloc(262144*sizeof(unsigned short));
 	//std::vector<unsigned short,aligned_allocator<unsigned short>> output_image(Y_SIZE*X_SIZE);
 
 
